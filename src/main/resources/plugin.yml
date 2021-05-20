@@ -1,0 +1,7 @@
+name: AkuraLib
+version: ${project.version}
+main: fr.k0bus.akuralib.AkuraLib
+api-version: 1.16
+authors: [ K0bus ]
+description: Library used by K0bus in spigot plugins
+website: https://k0bus.fr
