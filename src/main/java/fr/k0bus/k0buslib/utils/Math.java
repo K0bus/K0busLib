@@ -1,4 +1,4 @@
-package fr.k0bus.akuralib.utils;
+package fr.k0bus.k0buslib.utils;
 
 public class Math{
     public static boolean isInteger(String s) {

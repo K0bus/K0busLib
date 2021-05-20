@@ -1,4 +1,4 @@
-package fr.k0bus.akuralib.settings;
+package fr.k0bus.k0buslib.settings;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;

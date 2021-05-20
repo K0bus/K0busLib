@@ -1,4 +1,4 @@
-package fr.k0bus.akuralib.utils;
+package fr.k0bus.k0buslib.utils;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

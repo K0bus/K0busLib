@@ -1,6 +1,6 @@
-package fr.k0bus.akuralib.settings;
+package fr.k0bus.k0buslib.settings;
 
-import fr.k0bus.akuralib.utils.Formater;
+import fr.k0bus.k0buslib.utils.Formater;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

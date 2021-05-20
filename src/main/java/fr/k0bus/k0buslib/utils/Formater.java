@@ -1,4 +1,4 @@
-package fr.k0bus.akuralib.utils;
+package fr.k0bus.k0buslib.utils;
 
 import net.md_5.bungee.api.ChatColor;
 

@@ -1,4 +1,4 @@
-package fr.k0bus.akuralib.settings;
+package fr.k0bus.k0buslib.settings;
 
 import org.apache.commons.lang.Validate;
 import org.bukkit.configuration.ConfigurationSection;

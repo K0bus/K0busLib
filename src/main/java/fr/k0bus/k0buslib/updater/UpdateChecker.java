@@ -1,4 +1,4 @@
-package fr.k0bus.akuralib.updater;
+package fr.k0bus.k0buslib.updater;
 
 import org.apache.maven.artifact.versioning.ComparableVersion;
 import org.bukkit.plugin.java.JavaPlugin;
