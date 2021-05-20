@@ -189,4 +189,8 @@ public class Configuration {
             e.printStackTrace();
         }
     }
+
+    public FileConfiguration getConfiguration() {
+        return configuration;
+    }
 }
