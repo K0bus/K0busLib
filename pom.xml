@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.k0bus</groupId>
-    <artifactId>AkuraLib</artifactId>
+    <artifactId>K0busLib</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>AkuraLib</name>
+    <name>K0busLib</name>
 
     <description>Library used by K0bus in spigot plugins</description>
     <properties>
