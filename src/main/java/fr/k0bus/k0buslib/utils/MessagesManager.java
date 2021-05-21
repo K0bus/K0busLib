@@ -8,8 +8,8 @@ import java.util.UUID;
 
 public class MessagesManager {
     private final HashMap<UUID, Long> antiSpam = new HashMap<>();
-    private final Settings settings;
-    private final Lang lang;
+    private Settings settings;
+    private Lang lang;
 
     public MessagesManager(Settings settings, Lang lang)
     {
@@ -25,7 +25,15 @@ public class MessagesManager {
         return lang;
     }
 
+    public void setLang(Lang lang) {
+        this.lang = lang;
+    }
+
     public Settings getSettings() {
         return settings;
+    }
+
+    public void setSettings(Settings settings) {
+        this.settings = settings;
     }
 }
