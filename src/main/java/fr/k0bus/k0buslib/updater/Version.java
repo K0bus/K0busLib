@@ -2,16 +2,19 @@ package fr.k0bus.k0buslib.updater;
 
 import fr.k0bus.k0buslib.utils.Math;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Version implements Comparable<Version>{
+public class Version implements Comparable<Version>, Serializable {
 
     List<Integer> num = new ArrayList<>();
     VersionType type;
+    String version;
 
     public Version(String version)
     {
+        this.version = version;
         for (VersionType vType:VersionType.values()) {
             String v = version.toLowerCase();
             if(v.contains(vType.getName()))
@@ -30,6 +33,12 @@ public class Version implements Comparable<Version>{
                 num.add(Integer.parseInt(v));
             }
         }
+    }
+
+    @Override
+    public String toString()
+    {
+        return version;
     }
 
     @Override
