@@ -29,11 +29,13 @@ public class UpdateChecker {
         } catch (IOException exception) {
             this.plugin.getLogger().info("Cannot look for updates: " + exception.getMessage());
         }
-        return null;
+        return new Version("X");
     }
     public boolean isUpToDate()
     {
-        return spigotVersion.compareTo(this.version)<0;
+        if(spigotVersion != null)
+            return spigotVersion.compareTo(this.version)<0;
+        return false;
     }
     public boolean isStable()
     {
