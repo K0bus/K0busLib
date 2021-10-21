@@ -47,7 +47,9 @@ public class Version implements Comparable<Version>, Serializable {
             return 1;
         int i = 0;
         for (int n : num) {
-            int compare = toCompare.num.get(i);
+            int compare = 0;
+            if(toCompare.num.contains(i))
+                compare = toCompare.num.get(i);
             if(n > compare)
                 return 1;
             if(n < compare)
