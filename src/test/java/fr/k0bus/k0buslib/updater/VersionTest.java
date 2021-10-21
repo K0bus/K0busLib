@@ -1,11 +1,14 @@
-import fr.k0bus.k0buslib.updater.Version;
+package fr.k0bus.k0buslib.updater;
 
-public class TestVersion {
-    public void testVersion()
+import junit.framework.TestCase;
+
+public class VersionTest extends TestCase {
+    public void test()
     {
-        Version v1 = new Version("1.9.3-RC");
-        Version v2 = new Version("1.10.3-SNAPSHOT");
+        Version v1 = new Version("4.6");
+        Version v2 = new Version("4.6.16");
         System.out.println(v2.compareTo(v1));
+
         if(v2.compareTo(v1) >= 0)
         {
             System.out.println("Latest version !");
