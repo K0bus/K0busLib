@@ -6,7 +6,7 @@
 
     <groupId>fr.k0bus</groupId>
     <artifactId>K0busLib</artifactId>
-    <version>1.2</version>
+    <version>1.2.1</version>
     <packaging>jar</packaging>
 
     <name>K0busLib</name>

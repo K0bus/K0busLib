@@ -1,5 +1,6 @@
 package fr.k0bus.k0buslib.utils;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.conversations.Conversable;
 import org.bukkit.entity.Player;
@@ -62,6 +63,6 @@ public class Messages {
     }
     public static void log(JavaPlugin plugin, String text, Level level)
     {
-        plugin.getLogger().log(level, Formater.formatColor(text));
+        plugin.getLogger().log(level, ChatColor.stripColor(Formater.formatColor(text)));
     }
 }
