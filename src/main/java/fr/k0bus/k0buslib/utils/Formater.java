@@ -1,6 +1,7 @@
 package fr.k0bus.k0buslib.utils;
 
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.event.entity.ProjectileHitEvent;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -10,11 +11,12 @@ public class Formater {
     {
         Pattern p = Pattern.compile("#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})");
         Matcher m = p.matcher(text);
-
-        while (m.find())
-        {
-            text = text.replace("#" + m.group(1), ChatColor.of("#" + m.group(1)).toString());
-        }
+        try {
+            ChatColor.class.getMethod("of", (Class<?>[]) null);
+            while (m.find()) {
+                text = text.replace("#" + m.group(1), ChatColor.of("#" + m.group(1)).toString());
+            }
+        }catch (NoSuchMethodException | SecurityException ignored){}
         return ChatColor.translateAlternateColorCodes('&',text);
     }
 }
