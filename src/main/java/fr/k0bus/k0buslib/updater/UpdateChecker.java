@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Scanner;
 
 public class UpdateChecker {
@@ -22,11 +23,17 @@ public class UpdateChecker {
     }
 
     public Version getVersion() {
-        try (InputStream inputStream = new URL("https://api.spigotmc.org/legacy/update.php?resource=" + this.resourceId).openStream(); Scanner scanner = new Scanner(inputStream)) {
-            if (scanner.hasNext()) {
+        try {
+            URL url = new URL("https://api.spigotmc.org/legacy/update.php?resource=" + this.resourceId);
+            URLConnection connection = url.openConnection();
+            connection.setConnectTimeout(5000);
+            Scanner scanner = new Scanner(connection.getInputStream());
+            if(scanner.hasNext())
+            {
                 return new Version(scanner.next());
             }
-        } catch (IOException exception) {
+        }catch (Exception exception)
+        {
             this.plugin.getLogger().info("Cannot look for updates: " + exception.getMessage());
         }
         return new Version("X");
